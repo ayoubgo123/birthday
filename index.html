@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>happy birthday Oussama</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* إخفاء أي تمرير */
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+
+        #countdown {
+            font-size: 2em;
+            z-index: 10; /* يظهر فوق الفيديو */
+            position: relative;
+        }
+
+        #videoBackground {
+            display: none; /* إخفاء الفيديو مبدئيًا */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* لجعل الفيديو يغطي الشاشة بالكامل */
+            z-index: -1; /* الفيديو في الخلفية */
+        }
+
+        #playButton {
+            display: none; /* إخفاء الزر مبدئيًا */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 20;
+        }
+
+        #playButton:hover {
+            background-color: #000000;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="countdown">
+        <h1>start happy birthday for Oussama in :</h1>
+        <div>
+            <span id="days">0</span> days|
+            <span id="hours">0</span> hours|
+            <span id="minutes">0</span> minutes|
+            <span id="seconds">0</span> seconds
+        </div>
+    </div>
+    <video id="videoBackground" loop aria-controls="play">
+        <source src="Moroccan Happy Birthday Joyeux Anniversaire_ سنة ح...يدة الدقة المراكشية 🎁 🎈 حفلة عيد ميلاد(1080P_HD)_1920_1080.mp4" type="video/mp4">
+        متصفحك لا يدعم عرض الفيديو.
+    </video>
+    <button id="playButton">play</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
