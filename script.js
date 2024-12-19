@@ -4,7 +4,7 @@
           hour = minute * 60,
           day = hour * 24;
   
-    let targetDate = "Nov 28, 2024 00:00:00",
+    let targetDate = "Dec 20, 2024 00:00:00",
         countDown = new Date(targetDate).getTime(),
         x = setInterval(function() {    
   
